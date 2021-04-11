@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  cms_app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8000:8000
+    env_file:
+      - ../src/.env
+
+  cms_db:
+    image: "postgres:12.5"
+    env_file:
+      - ../src/.env
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data

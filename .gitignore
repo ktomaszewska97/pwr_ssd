@@ -1,6 +1,9 @@
 # IDE
 .idea
 
+# PSQL
+docker/postgres_data/
+
 # MacOs
 .DS_Store
 
